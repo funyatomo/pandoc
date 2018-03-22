@@ -35,7 +35,7 @@ $ pandoc -s -c css/github.css --self-contained README.md -o test2.html
 ```
 $ mkdir ~/.pandoc
 $ mv css/github.css ~/.pandoc/
-$ alias pandoc='pandoc -s -c css/github.css --self-contained'
+$ alias pandoc='pandoc -s -c ~/.pandoc/github.css --self-contained'
 ```
 
 
