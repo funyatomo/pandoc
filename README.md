@@ -2,6 +2,11 @@
 
 generating github-like html document using pandoc with css file
 
+## pandocのインストール
+
+[pandoc.org](https://pandoc.org)
+[Pandoc ユーザーズガイド日本語版](http://sky-y.github.io/site-pandoc-jp/users-guide/)
+
 ## 基本的なコマンド
 githubライクなスタイルシートを取り込んでの，markdown文書からhtml文書への変換
 
