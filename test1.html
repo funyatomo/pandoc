@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="C:/msys64/home/Tomoaki/.pandoc/github.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="pandoc">pandoc</h1>
+<p>pandocはいくつかのマークアップ言語の文書を別の形式の文書に変換するコマンドラインツール</p>
+<ul>
+<li>目的:generating github-like html document using pandoc with css file</li>
+</ul>
+<h2 id="pandocのインストール">pandocのインストール</h2>
+<p>msiファイルでインストールを行うか，zipファイルを解凍してpandoc.exeをパスの通ったディレクトリに配置する</p>
+<p><a href="https://pandoc.org">pandoc.org</a></p>
+<p>pandocの日本語版リファレンス</p>
+<p><a href="http://sky-y.github.io/site-pandoc-jp/users-guide/">Pandoc ユーザーズガイド日本語版</a></p>
+<h2 id="基本的なコマンド">基本的なコマンド</h2>
+<p>githubライクなスタイルシートを取り込んでの，markdown文書からhtml文書への変換</p>
+<pre><code>$ pandoc -s -t html5 -c css/github.css README.md -o test1.html</code></pre>
+<ul>
+<li>拡張子を指定していれば，<code>-t html5</code>は無くても大丈夫</li>
+<li><code>-s (--standalone)</code>は適切なヘッダやフッタ付きの完全なhtml文書を出力するのに必要</li>
+</ul>
+<p>htmlにスタイルシートを埋め込むには<code>--self-contained</code>とする</p>
+<pre><code>$ pandoc -s -c css/github.css --self-contained README.md -o test2.html</code></pre>
+<h2 id="cssをホームディレクトリに">cssをホームディレクトリに</h2>
+<p>ホームディレクトリ直下にcssファイルを配置し，エイリアスも設定する</p>
+<pre><code>$ mkdir ~/.pandoc
+$ mv css/github.css ~/.pandoc/
+$ alias pandoc=&#39;pandoc -s -c ~/.pandoc/github.css --self-contained&#39;</code></pre>
+<blockquote>
+<h2 id="source">Source</h2>
+<ul>
+<li><a href="https://gist.github.com/griffin-stewie/9755783">github.css</a></li>
+<li><a href="https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa#file-markdown-cheatsheet-md">markdown-cheatsheet.md</a></li>
+</ul>
+<h2 id="github-webpage">Github webpage</h2>
+<ul>
+<li><a href="https://github.com/funyatomo/pandoc">funyatomo/pandoc</a></li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>Comming soon</li>
+</ul>
+</blockquote>
+</body>
+</html>
