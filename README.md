@@ -3,6 +3,5 @@
 generating github-like html document using pandoc
 
 ```
-$ echo hoge
-hoge
+$ pandoc -s -t html5 -c css/github.css README.md -o test.html
 ```
