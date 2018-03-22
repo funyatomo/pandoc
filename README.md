@@ -3,8 +3,11 @@
 generating github-like html document using pandoc with css file
 
 ## pandocのインストール
+msiファイルでインストールを行うか，zipファイルを解凍してpandoc.exeをパスの通ったディレクトリに配置する
 
 [pandoc.org](https://pandoc.org)
+
+pandocユーザーズガイドの日本語版
 
 [Pandoc ユーザーズガイド日本語版](http://sky-y.github.io/site-pandoc-jp/users-guide/)
 
