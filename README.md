@@ -9,7 +9,8 @@ githubライクなスタイルシートを取り込んでの，markdown文書か
 $ pandoc -s -t html5 -c css/github.css README.md -o test.html
 ```
 
-拡張子を指定していれば，`-t html5`は無くても大丈夫  `-s (--standalone)`は適切なヘッダやフッタ付きの完全なhtml文書を出力するのに必要
+拡張子を指定していれば，`-t html5`は無くても大丈夫
+`-s (--standalone)`は適切なヘッダやフッタ付きの完全なhtml文書を出力するのに必要
 
 htmlにスタイルシートを埋め込むには`--self-contained`とする
 
