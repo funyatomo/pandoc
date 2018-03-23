@@ -49,3 +49,6 @@ msys2などの，minttyを端末として利用している人は`winpty`でラ�
 >
 > ## Reference
 > - Comming soon
+
+## 相対リンク
+[Cheatsheet](Cheatsheet.html)
