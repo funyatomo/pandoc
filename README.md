@@ -40,6 +40,16 @@ $ alias pandoc='pandoc -s -c ~/.pandoc/github.css --self-contained'
 
 msys2などの，minttyを端末として利用している人は`winpty`でラップするとセグフォを防げる
 
+`-s`オプションによってtitleおよびpagetitleを要求されるが，無視しても問題ない。追加する場合は以下のようにする
+
+```
+% Title
+% Author
+% Date
+```
+
+Author, Dateは省略可能
+
 > ## Source
 > - [github.css](https://gist.github.com/griffin-stewie/9755783)
 > - [markdown-cheatsheet.md](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa#file-markdown-cheatsheet-md)
