@@ -1,5 +1,4 @@
 ---
-generator: pandoc
 title: markdown-cheatsheet
 ---
 
