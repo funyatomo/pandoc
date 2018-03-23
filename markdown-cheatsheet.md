@@ -1,4 +1,7 @@
-% markdown-cheatsheet.md
+---
+generator: pandoc
+title: markdown-cheatsheet
+---
 
 # Block Elements
 
