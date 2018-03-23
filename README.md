@@ -38,6 +38,7 @@ $ mv css/github.css ~/.pandoc/
 $ alias pandoc='pandoc -s -c ~/.pandoc/github.css --self-contained'
 ```
 
+msys2などの，minttyを端末として利用している人は`winpty`でラップするとセグフォを防げる
 
 > ## Source
 > - [github.css](https://gist.github.com/griffin-stewie/9755783)
