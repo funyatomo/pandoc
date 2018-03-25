@@ -5,15 +5,15 @@ pandocはいくつかのマークアップ言語の文書を別の形式の文�
 - 目的:generating github-like html document using pandoc with css file
 
 ## pandocのインストール
-msiファイルでインストールを行うか，zipファイルを解凍してpandoc.exeをパスの通ったディレクトリに配置する
+- msiファイルでインストールを行うか，zipファイルを解凍してpandoc.exeをパスの通ったディレクトリに配置する(for Windows OS)
 
-[pandoc.org](https://pandoc.org)
+  - [pandoc.org](https://pandoc.org)
 
-pandocの日本語版リファレンス
+- pandocの日本語版リファレンス
 
-[Pandoc ユーザーズガイド日本語版](http://sky-y.github.io/site-pandoc-jp/users-guide/)
+  - [Pandoc ユーザーズガイド日本語版](http://sky-y.github.io/site-pandoc-jp/users-guide/)
 
-## 基本的なコマンド
+## 基本的なコマンド，オプションなど
 githubライクなスタイルシートを取り込んでの，markdown文書からhtml文書への変換
 
 ```
@@ -22,6 +22,15 @@ $ pandoc -s -t html5 -c css/github.css README.md -o test1.html
 
 - 拡張子を指定していれば，`-t html5`は無くても大丈夫
 - `-s (--standalone)`は適切なヘッダやフッタ付きの完全なhtml文書を出力するのに必要
+`-s`オプションによってtitleおよびpagetitleを要求されるが，無視しても問題ない。以下のようにファイルの先頭に記述すると解決する
+
+```
+% Title
+% Author
+% Date
+```
+
+Author, Dateは省略可能
 
 htmlにスタイルシートを埋め込むには`--self-contained`とする
 
@@ -38,17 +47,34 @@ $ mv css/github.css ~/.pandoc/
 $ alias pandoc='pandoc -s -c ~/.pandoc/github.css --self-contained'
 ```
 
+## MSYS2(or Cygwin)を使う人など
 msys2などの，minttyを端末として利用している人は`winpty`でラップするとセグフォを防げる
 
-`-s`オプションによってtitleおよびpagetitleを要求されるが，無視しても問題ない。追加する場合は以下のようにする
-
 ```
-% Title
-% Author
-% Date
+$ pacman -S winpty
+$ winpty pandoc -h
 ```
 
-Author, Dateは省略可能
+## Code blockでのsintax highlighting
+多くのプログラミング言語のsyntaxハイライトをサポートしている
+
+- 書き方
+````
+``` {.c}
+int main(void){
+  printf("Hello, world!\n");
+  return 0;
+}
+```
+````
+
+- 結果
+``` {.c}
+int main(void){
+  printf("Hello, world!\n");
+  return 0;
+}
+```
 
 > ## Source
 > - [github.css](https://gist.github.com/griffin-stewie/9755783)
@@ -56,9 +82,8 @@ Author, Dateは省略可能
 >
 > ## Github webpage
 > - [funyatomo/pandoc](https://github.com/funyatomo/pandoc)
->
-> ## Reference
-> - Comming soon
+
 
 ## 相対リンク
+複数のローカルファイルをリンク出来る
 [Cheatsheet](Cheatsheet.html)
