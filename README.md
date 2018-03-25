@@ -60,7 +60,7 @@ $ winpty pandoc -h
 
 - 書き方
 ````
-``` {.c}
+```c
 int main(void){
   printf("Hello, world!\n");
   return 0;
@@ -69,7 +69,7 @@ int main(void){
 ````
 
 - 結果
-``` {.c}
+```c
 int main(void){
   printf("Hello, world!\n");
   return 0;

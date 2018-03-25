@@ -11,29 +11,104 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <link rel="stylesheet" href="C:/msys64/home/Tomoaki/.pandoc/github.css">
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="css/github.css">
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
-<h1 id="pandoc">pandoc</h1>
-<p>pandocはいくつかのマークアップ言語の文書を別の形式の文書に変換するコマンドラインツール</p>
+<h1 id="pandoc">Pandoc</h1>
+<p>Pandocはいくつかのマークアップ言語の文書を別の形式の文書に変換するコマンドラインツール</p>
 <ul>
-<li>目的:generating github-like html document using pandoc with css file</li>
+<li>目的:generating github-like html document using Pandoc with css file</li>
 </ul>
-<h2 id="pandocのインストール">pandocのインストール</h2>
-<p>msiファイルでインストールを行うか，zipファイルを解凍してpandoc.exeをパスの通ったディレクトリに配置する</p>
-<p><a href="https://pandoc.org">pandoc.org</a></p>
-<p>pandocの日本語版リファレンス</p>
-<p><a href="http://sky-y.github.io/site-pandoc-jp/users-guide/">Pandoc ユーザーズガイド日本語版</a></p>
-<h2 id="基本的なコマンド">基本的なコマンド</h2>
+<h2 id="pandocのインストール">Pandocのインストール</h2>
+<ul>
+<li><p>msiファイルでインストールを行うか，zipファイルを解凍してpandoc.exeをパスの通ったディレクトリに配置する(for Windows OS)</p>
+<ul>
+<li><a href="https://pandoc.org">Pandoc.org</a></li>
+</ul></li>
+<li><p>Pandocの日本語版リファレンス</p>
+<ul>
+<li><a href="http://sky-y.github.io/site-pandoc-jp/users-guide/">Pandoc ユーザーズガイド日本語版</a></li>
+</ul></li>
+</ul>
+<h2 id="基本的なコマンドオプションなど">基本的なコマンド，オプションなど</h2>
 <p>githubライクなスタイルシートを取り込んでの，markdown文書からhtml文書への変換</p>
 <pre><code>$ pandoc -s -t html5 -c css/github.css README.md -o test1.html</code></pre>
 <ul>
 <li>拡張子を指定していれば，<code>-t html5</code>は無くても大丈夫</li>
-<li><code>-s (--standalone)</code>は適切なヘッダやフッタ付きの完全なhtml文書を出力するのに必要</li>
+<li><code>-s (--standalone)</code>は適切なヘッダやフッタ付きの完全なhtml文書を出力するのに必要 <code>-s</code>オプションによってtitleおよびpagetitleを要求されるが，無視しても問題ない。以下のようにファイルの先頭に記述すると解決する</li>
 </ul>
+<pre><code>% Title
+% Author
+% Date</code></pre>
+<p>Author, Dateは省略可能</p>
 <p>htmlにスタイルシートを埋め込むには<code>--self-contained</code>とする</p>
 <pre><code>$ pandoc -s -c css/github.css --self-contained README.md -o test2.html</code></pre>
 <h2 id="cssをホームディレクトリに">cssをホームディレクトリに</h2>
@@ -41,7 +116,29 @@
 <pre><code>$ mkdir ~/.pandoc
 $ mv css/github.css ~/.pandoc/
 $ alias pandoc=&#39;pandoc -s -c ~/.pandoc/github.css --self-contained&#39;</code></pre>
+<h2 id="msys2or-cygwinを使う人など">MSYS2(or Cygwin)を使う人など</h2>
 <p>msys2などの，minttyを端末として利用している人は<code>winpty</code>でラップするとセグフォを防げる</p>
+<pre><code>$ pacman -S winpty
+$ winpty pandoc -h</code></pre>
+<h2 id="code-blockでのsintax-highlighting">Code blockでのsintax highlighting</h2>
+<p>多くのプログラミング言語のsyntaxハイライトをサポートしている</p>
+<ul>
+<li>書き方</li>
+</ul>
+<pre><code>``` {.c}
+int main(void){
+  printf(&quot;Hello, world!\n&quot;);
+  return 0;
+}
+```</code></pre>
+<ul>
+<li>結果</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="dt">int</span> main(<span class="dt">void</span>){</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">  printf(<span class="st">&quot;Hello, world!</span><span class="sc">\n</span><span class="st">&quot;</span>);</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">  <span class="cf">return</span> <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">}</a></code></pre></div>
+<p><code>bash</code>や<code>Fortran</code>も対応してる！</p>
 <blockquote>
 <h2 id="source">Source</h2>
 <ul>
@@ -52,12 +149,8 @@ $ alias pandoc=&#39;pandoc -s -c ~/.pandoc/github.css --self-contained&#39;</cod
 <ul>
 <li><a href="https://github.com/funyatomo/pandoc">funyatomo/pandoc</a></li>
 </ul>
-<h2 id="reference">Reference</h2>
-<ul>
-<li>Comming soon</li>
-</ul>
 </blockquote>
 <h2 id="相対リンク">相対リンク</h2>
-<p><a href="Cheatsheet.html">Cheatsheet</a></p>
+<p>複数のローカルファイルをリンク出来る <a href="Cheatsheet.html">Cheatsheet</a></p>
 </body>
 </html>
