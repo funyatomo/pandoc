@@ -1,15 +1,15 @@
-# pandoc
+# Pandoc
 
-pandocはいくつかのマークアップ言語の文書を別の形式の文書に変換するコマンドラインツール
+Pandocはいくつかのマークアップ言語の文書を別の形式の文書に変換するコマンドラインツール
 
-- 目的:generating github-like html document using pandoc with css file
+- 目的:generating github-like html document using Pandoc with css file
 
-## pandocのインストール
+## Pandocのインストール
 - msiファイルでインストールを行うか，zipファイルを解凍してpandoc.exeをパスの通ったディレクトリに配置する(for Windows OS)
 
-  - [pandoc.org](https://pandoc.org)
+  - [Pandoc.org](https://pandoc.org)
 
-- pandocの日本語版リファレンス
+- Pandocの日本語版リファレンス
 
   - [Pandoc ユーザーズガイド日本語版](http://sky-y.github.io/site-pandoc-jp/users-guide/)
 
@@ -75,6 +75,8 @@ int main(void){
   return 0;
 }
 ```
+
+`bash`や`Fortran`も対応してる！
 
 > ## Source
 > - [github.css](https://gist.github.com/griffin-stewie/9755783)
